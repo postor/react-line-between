@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
-    "next": "^7.0.2"
+    "next": "^7.0.2",
+    "snapsvg": "^0.5.1"
   }
 }

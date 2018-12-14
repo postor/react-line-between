@@ -1658,6 +1658,10 @@ etag@1.8.1, etag@~1.8.1:
   version "1.8.1"
   resolved "http://registry.npm.taobao.org/etag/download/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
+eve@~0.5.1:
+  version "0.5.4"
+  resolved "http://registry.npm.taobao.org/eve/download/eve-0.5.4.tgz#67d080b9725291d7e389e34c26860dd97f1debaa"
+
 event-source-polyfill@0.0.12:
   version "0.0.12"
   resolved "http://registry.npm.taobao.org/event-source-polyfill/download/event-source-polyfill-0.0.12.tgz#e539cd67fdef2760a16aa5262fa98134df52e3af"
@@ -3452,6 +3456,12 @@ snapdragon@^0.8.1:
     source-map "^0.5.6"
     source-map-resolve "^0.5.0"
     use "^3.1.0"
+
+snapsvg@^0.5.1:
+  version "0.5.1"
+  resolved "http://registry.npm.taobao.org/snapsvg/download/snapsvg-0.5.1.tgz#0caf52c79189a290746fc446cc5e863f6bdddfe3"
+  dependencies:
+    eve "~0.5.1"
 
 source-list-map@^2.0.0:
   version "2.0.1"
