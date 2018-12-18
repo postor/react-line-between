@@ -16,17 +16,35 @@ export default class Index extends Component {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="/static/snap.svg-min.js"></script>
       </Head>
+
+      <h1>react-line-between</h1>
+      <p>this does not need position absolute, and auto update when rerender</p>
+      <p>add some label on both sides, click on label to draw lines, remove some label to see how lines follow</p>
       <div style={{ display: 'flex' }}>
-        <List
-          ref={l => this.left = l}
-          select={(k, n) => this.select('left', k, n)}
-          remove={(k, n) => this.removeValue('left', k)}
-        />
-        <List
-          ref={l => this.right = l}
-          select={(k, n) => this.select('right', k, n)}
-          remove={(k, n) => this.removeValue('right', k)}
-        />
+        <div style={{
+          margin: '10px',
+          padding: '10px',
+          border: '1px solid black',
+        }}>
+          <h2>left</h2>
+          <List
+            ref={l => this.left = l}
+            select={(k, n) => this.select('left', k, n)}
+            remove={(k, n) => this.removeValue('left', k)}
+          />
+        </div>
+        <div style={{
+          margin: '10px',
+          padding: '10px',
+          border: '1px solid black',
+        }}>
+          <h2>right</h2>
+          <List
+            ref={l => this.right = l}
+            select={(k, n) => this.select('right', k, n)}
+            remove={(k, n) => this.removeValue('right', k)}
+          />
+        </div>
       </div>
     </Container>)
   }
@@ -94,7 +112,7 @@ export default class Index extends Component {
       this.setState({
         lines: {
           ...lines,
-          [`${selected.value}`]: {
+          [`${selected.side}-${selected.value}|${side}-${value}`]: {
             from: selected.node,
             to: node,
             [selected.side]: selected.value,

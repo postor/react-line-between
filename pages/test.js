@@ -2,6 +2,11 @@ import Head from 'next/head'
 import { Component } from 'react'
 import Container from '../lib/Container'
 
+class TestComponent extends Component {
+  render() {
+    return (<span >[line to]</span>)
+  }
+}
 
 export default class Index extends Component {
   state = {
@@ -29,7 +34,7 @@ export default class Index extends Component {
 
   render() {
     const { lis, input } = this.state
-    return (<Container lines={this.state.lines}>
+    return (<Container ref={svg => this.svg = svg} lines={this.state.lines} updateOnRender={false}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="/static/snap.svg-min.js"></script>
@@ -51,11 +56,9 @@ export default class Index extends Component {
           input: '',
         })}>add li</button>
         <br />
-        <button onClick={() => this.setState({
-          lis: lis.concat(input),
-          input: '',
-        })}>redraw line</button>
-        <span ref={b => this.b = b}>[line to]</span></div>
+        <button onClick={() => this.svg.updateSvg()}>redraw line</button>
+        <TestComponent ref={b => this.b = b} />
+      </div>
     </Container>)
   }
 }

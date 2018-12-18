@@ -1,20 +1,19 @@
 import { Component } from 'react'
+import getCounter from './counter'
 
 export default class List extends Component {
+
+  counter = getCounter()
+  lis = {}
   state = {
     list: {},
-    input: '',
+    input: this.counter(),
   }
-
-  lis = {}
 
   render() {
     const { input, list } = this.state
     const { select } = this.props
     return (<div>
-      <h1>react-line-between</h1>
-      <p>this does not need position absolute, and auto update when rerender</p>
-      <p>add some label on both sides, click on label to draw lines, remove some label to see how lines follow</p>
       <ul>
         {Object.keys(list).map((k) => {
           return (<li
@@ -41,14 +40,14 @@ export default class List extends Component {
         })}
       </ul>
       <input value={input} onChange={(e) => this.setState({ input: e.target.value })} />
-      {list[input] ? ('already exist') : (<button
+      {input === '' ? 'value empty' : list[input] !== undefined ? ('already exist') : (<button
         onClick={() => {
           this.setState({
             list: {
               ...this.state.list,
               [input]: false,
             },
-            input: '',
+            input: this.counter(),
           })
         }}
       >add label</button>)}
