@@ -71,7 +71,7 @@ export default class Index extends Component {
         this.setState({ selected: null })
         return
       }
-      
+
       //切换
       this[selected.side].setSelected(selected.value, false)
       this.setState({
@@ -109,12 +109,11 @@ export default class Index extends Component {
       })
       this[selected.side].setSelected(selected.value, false)
     }
-
   }
 
   removeValue(side, value) {
     const { lines, selected } = this.state
-    const newSelected = (selected.side === side && selected.value === value) ? null : selected
+    const newSelected = (selected && selected.side === side && selected.value === value) ? null : selected
     let k1
     if (Object.keys(lines).some(k => {
       k1 = k
