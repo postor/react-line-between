@@ -1,6 +1,6 @@
 {
   "name": "react-line-between",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "this does not need position absolute, and auto update when rerender, with build-in animation",
   "main": "dist/Container.js",
   "scripts": {
@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/postor/react-line-between#readme",
   "dependencies": {
-    "fs-extra": "^7.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "fs-extra": "^7.0.1",
     "next": "^7.0.2"
   }
 }
