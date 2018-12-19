@@ -18,7 +18,7 @@ export default class Index extends Component {
       </Head>
 
       <h1>react-line-between</h1>
-      <p>this does not need position absolute, and auto update when rerender</p>
+      <p>this does not need position absolute, and auto update when rerender, with build-in animation</p>
       <p>add some label on both sides, click on label to draw lines, remove some label to see how lines follow</p>
       <div style={{ display: 'flex' }}>
         <div style={{

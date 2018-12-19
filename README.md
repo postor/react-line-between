@@ -1,5 +1,7 @@
 # react-line-between
 
+this does not need position absolute, and auto update when rerender, with build-in animation
+
 ## usage
 
 1. install
