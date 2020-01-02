@@ -3,6 +3,7 @@
 this does not need position absolute, and auto update when rerender, with build-in animation | 无需绝对位置，自动重绘，自带动画
 
 ![screenshot](./screenshot.gif)
+https://www.youtube.com/watch?v=H6yLY-E3fjE&list=PLM1v95K5B1ntVsYvNJIxgRPppngrO_X4s
 
 ## usage | 使用
 
